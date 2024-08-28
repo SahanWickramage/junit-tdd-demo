@@ -10,12 +10,14 @@ import static org.junit.Assert.assertEquals;
  */
 public class CalculatorTest {
 
+    Calculator calculator;
+
     /**
      * Initializes calculator object before each test
      */
     @Before
     public void setUp() {
-        var calculator = new Calculator();
+        this.calculator = new Calculator();
     }
 
     /**
@@ -26,7 +28,7 @@ public class CalculatorTest {
      * @return sum of numA and numB
      */
     @Test
-    void twoPlusThreeShouldReturnFive() {
+    public void twoPlusThreeShouldReturnFive() {
         assertEquals(5, calculator.add(2, 3));
     }
 }
